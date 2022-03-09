@@ -23,9 +23,16 @@
   pass_filenames: false
 # PHP
 - id: php-cs-fixer
-  name: php cs-fixer
+  name: PHP CS-Fixer
   description: Fix PHP Code Standard
-  entry: php vendor/bin/php-cs-fixer fix
+  entry: vendor/bin/php-cs-fixer fix
   language: system
-  types: [rust]
+  types: [php]
+  pass_filenames: true
+- id: php-stan
+  name: PHP Stan
+  description: PHP Static Analysis
+  entry: vendor/bin/phpstan analyse
+  language: system
+  types: [php]
   pass_filenames: true
