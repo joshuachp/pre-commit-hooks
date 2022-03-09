@@ -1,0 +1,31 @@
+# Rust
+- id: rust-fmt
+  name: fmt
+  description: Format files with cargo fmt.
+  entry: cargo fmt
+  language: system
+  types: [rust]
+  args: ["--"]
+- id: rust-check
+  name: cargo check
+  description: Check the package for errors.
+  entry: cargo check
+  language: system
+  types: [rust]
+  pass_filenames: false
+- id: rust-clippy
+  name: clippy
+  description: Lint rust sources
+  entry: cargo clippy
+  language: system
+  args: ["--", "-D", "warnings"]
+  types: [rust]
+  pass_filenames: false
+# PHP
+- id: php-cs-fixer
+  name: php cs-fixer
+  description: Fix PHP Code Standard
+  entry: php vendor/bin/php-cs-fixer fix
+  language: system
+  types: [rust]
+  pass_filenames: true
