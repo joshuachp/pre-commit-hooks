@@ -36,3 +36,18 @@
   language: system
   types: [php]
   pass_filenames: true
+# Nix
+- id: nix-nixpkgs-fmt
+  name: nixpkgs-fmt
+  description: Format nix package with nixpkgs-fmt
+  entry: nixpkgs-fmt --check --explain
+  language: system
+  types: [nix]
+  pass_filenames: true
+- id: nix-nixfmt
+  name: nixfmt
+  description: Format nix package with nixfmt
+  entry: nixfmt --check
+  language: system
+  types: [nix]
+  pass_filenames: true
