@@ -58,3 +58,10 @@
   language: system
   types: [nix]
   pass_filenames: true
+- id: nix-alejandra
+  name: alejandra
+  description: Format nix package with alejandra
+  entry: alejandra --check
+  language: system
+  types: [nix]
+  pass_filenames: true
