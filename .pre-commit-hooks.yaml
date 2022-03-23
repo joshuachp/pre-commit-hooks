@@ -21,6 +21,13 @@
   args: ["--", "-D", "warnings"]
   types: [rust]
   pass_filenames: false
+- id: rust-test
+  name: cargo test
+  description: Run the project test suite
+  entry: cargo test
+  language: system
+  types: [rust]
+  pass_filenames: false
 # PHP
 - id: php-cs-fixer
   name: PHP CS-Fixer
