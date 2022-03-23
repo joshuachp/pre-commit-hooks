@@ -7,3 +7,9 @@
 - Add rust and start php hooks
 - Fix php-cs-fixer and add phpstan
 - Add nix formatters
+
+## 0.1.2
+
+## Features
+
+- Add rust-test hook
