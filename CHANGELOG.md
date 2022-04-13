@@ -10,6 +10,12 @@
 
 ## 0.1.2
 
-## Features
+### Features
 
 - Add rust-test hook
+
+## 0.1.3
+
+### Features
+
+- Add prettier
