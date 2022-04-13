@@ -25,3 +25,9 @@
 ### Fix
 
 - Add package.json placehoder
+
+## 0.1.5
+
+### Fix
+
+- Use type or
