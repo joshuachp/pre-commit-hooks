@@ -19,3 +19,9 @@
 ### Features
 
 - Add prettier
+
+## 0.1.4
+
+### Fix
+
+- Add package.json placehoder
