@@ -65,6 +65,13 @@
   language: system
   types: [nix]
   pass_filenames: true
+- id: nix-statix
+  name: statix
+  description: Link nix code with statix
+  entry: statix check
+  language: system
+  types: [nix]
+  pass_filenames: true
 # JavaScript/TypeScript
 - id: js-prettier
   name: js-prettier
