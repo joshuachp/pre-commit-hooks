@@ -31,3 +31,9 @@
 ### Fix
 
 - Use type or
+
+## 0.1.6
+
+### Features
+
+- Add nix-statix hook
