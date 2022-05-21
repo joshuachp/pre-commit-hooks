@@ -37,3 +37,13 @@
 ### Features
 
 - Add nix-statix hook
+
+## 0.1.7
+
+### Fix
+
+- Do not pass filenames to statix
+
+### Features
+
+- Update pre-commit-hooks
