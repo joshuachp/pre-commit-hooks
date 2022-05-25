@@ -50,6 +50,7 @@
   entry: nix flake check
   language: system
   types: [nix]
+  pass_filenames: false
 - id: nix-nixpkgs-fmt
   name: nixpkgs-fmt
   description: Format nix package with nixpkgs-fmt
