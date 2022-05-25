@@ -90,7 +90,7 @@
   types_or: [javascript, jsx, ts, tsx, json]
   pass_filenames: true
 - id: js-yarn-run-filenames
-  name: js-yarn-run
+  name: js-yarn-run-filenames
   description: "Run a custom Yarn command, passing the filenames"
   entry: yarn
   language: system
