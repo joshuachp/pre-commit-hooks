@@ -53,3 +53,9 @@
 ### Features
 
 - Add custom Yarn command
+
+## 0.1.9
+
+### Features
+
+- Yarn hook with pass filenames
