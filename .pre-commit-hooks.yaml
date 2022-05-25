@@ -44,6 +44,12 @@
   types: [php]
   pass_filenames: true
 # Nix
+- id: nix-flake-check
+  name: nix-flake-check
+  description: Check the flake.nix file for errors
+  entry: nix flake check
+  language: system
+  types: [nix]
 - id: nix-nixpkgs-fmt
   name: nixpkgs-fmt
   description: Format nix package with nixpkgs-fmt
