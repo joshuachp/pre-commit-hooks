@@ -82,3 +82,9 @@
   require_serial: false
   additional_dependencies: ["prettier@latest"]
   minimum_pre_commit_version: "0"
+- id: js-yarn-run
+  name: js-yarn-run
+  description: "Run a custom Yarn command"
+  entry: yarn
+  language: system
+  types_or: [javascript, jsx, ts, tsx, json]
