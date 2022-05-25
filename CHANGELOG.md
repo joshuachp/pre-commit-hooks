@@ -47,3 +47,9 @@
 ### Features
 
 - Update pre-commit-hooks
+
+## 0.1.8
+
+### Features
+
+- Add custom Yarn command
