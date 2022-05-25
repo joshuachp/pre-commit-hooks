@@ -44,6 +44,12 @@
   types: [php]
   pass_filenames: true
 # Nix
+- id: nix-flake-check
+  name: nix-flake-check
+  description: Check the flake.nix file for errors
+  entry: nix flake check
+  language: system
+  types: [nix]
 - id: nix-nixpkgs-fmt
   name: nixpkgs-fmt
   description: Format nix package with nixpkgs-fmt
@@ -90,7 +96,7 @@
   types_or: [javascript, jsx, ts, tsx, json]
   pass_filenames: true
 - id: js-yarn-run-filenames
-  name: js-yarn-run
+  name: js-yarn-run-filenames
   description: "Run a custom Yarn command, passing the filenames"
   entry: yarn
   language: system
