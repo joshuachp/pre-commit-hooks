@@ -74,4 +74,10 @@
 
 ### Fix
 
+- Do not pass filenames to nix check
+
+## 0.1.12
+
+### Fix
+
 - Do not pass filenames to nix statix
