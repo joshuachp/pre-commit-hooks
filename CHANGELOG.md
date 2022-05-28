@@ -59,3 +59,19 @@
 ### Features
 
 - Yarn hook with pass filenames
+
+## 0.1.10
+
+### Fix
+
+- Wrong name for hook
+
+### Features
+
+- Add nix flake check
+
+## 0.1.11
+
+### Fix
+
+- Do not pass filenames to nix statix
