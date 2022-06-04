@@ -81,3 +81,9 @@
 ### Fix
 
 - Do not pass filenames to nix statix
+
+## 0.1.13
+
+### Feature
+
+- Add stylua formatter
