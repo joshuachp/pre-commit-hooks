@@ -1,64 +1,28 @@
 # Changelog
 
-## 0.1.0
+## 0.1.14
 
-### Features
+### Refactor
 
-- Add rust and start php hooks
-- Fix php-cs-fixer and add phpstan
-- Add nix formatters
+- Rename hooks with descriptive names
 
-## 0.1.2
+## 0.1.13
 
-### Features
+### Feature
 
-- Add rust-test hook
+- Add stylua formatter
 
-## 0.1.3
-
-### Features
-
-- Add prettier
-
-## 0.1.4
+## 0.1.12
 
 ### Fix
 
-- Add package.json placehoder
+- Do not pass filenames to nix statix
 
-## 0.1.5
-
-### Fix
-
-- Use type or
-
-## 0.1.6
-
-### Features
-
-- Add nix-statix hook
-
-## 0.1.7
+## 0.1.11
 
 ### Fix
 
-- Do not pass filenames to statix
-
-### Features
-
-- Update pre-commit-hooks
-
-## 0.1.8
-
-### Features
-
-- Add custom Yarn command
-
-## 0.1.9
-
-### Features
-
-- Yarn hook with pass filenames
+- Do not pass filenames to nix check
 
 ## 0.1.10
 
@@ -70,20 +34,62 @@
 
 - Add nix flake check
 
-## 0.1.11
+## 0.1.9
+
+### Features
+
+- Yarn hook with pass filenames
+
+## 0.1.8
+
+### Features
+
+- Add custom Yarn command
+
+## 0.1.7
 
 ### Fix
 
-- Do not pass filenames to nix check
+- Do not pass filenames to statix
 
-## 0.1.12
+### Features
+
+- Update pre-commit-hooks
+
+## 0.1.6
+
+### Features
+
+- Add nix-statix hook
+
+## 0.1.5
 
 ### Fix
 
-- Do not pass filenames to nix statix
+- Use type or
 
-## 0.1.13
+## 0.1.4
 
-### Feature
+### Fix
 
-- Add stylua formatter
+- Add package.json placehoder
+
+## 0.1.3
+
+### Features
+
+- Add prettier
+
+## 0.1.2
+
+### Features
+
+- Add rust-test hook
+
+## 0.1.0
+
+### Features
+
+- Add rust and start php hooks
+- Fix php-cs-fixer and add phpstan
+- Add nix formatters
