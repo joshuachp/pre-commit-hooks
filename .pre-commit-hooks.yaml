@@ -2,21 +2,21 @@
 # Rust
 #
 - id: rust-fmt
-  name: fmt
+  name: format rust
   description: Format files with cargo fmt.
   entry: cargo fmt
   language: system
   types: [rust]
   args: ["--"]
 - id: rust-check
-  name: cargo check
+  name: check rust
   description: Check the package for errors.
   entry: cargo check
   language: system
   types: [rust]
   pass_filenames: false
 - id: rust-clippy
-  name: clippy
+  name: check rust clippy
   description: Lint rust sources
   entry: cargo clippy
   language: system
@@ -24,7 +24,7 @@
   types: [rust]
   pass_filenames: false
 - id: rust-test
-  name: cargo test
+  name: test rust
   description: Run the project test suite
   entry: cargo test
   language: system
@@ -34,14 +34,14 @@
 # PHP
 #
 - id: php-cs-fixer
-  name: PHP CS-Fixer
+  name: format php
   description: Fix PHP Code Standard
   entry: vendor/bin/php-cs-fixer fix
   language: system
   types: [php]
   pass_filenames: true
 - id: php-stan
-  name: PHP Stan
+  name: check php
   description: PHP Static Analysis
   entry: vendor/bin/phpstan analyse
   language: system
@@ -51,35 +51,35 @@
 # Nix
 #
 - id: nix-flake-check
-  name: nix-flake-check
+  name: check nix flake
   description: Check the flake.nix file for errors
   entry: nix flake check
   language: system
   types: [nix]
   pass_filenames: false
 - id: nix-nixpkgs-fmt
-  name: nixpkgs-fmt
+  name: format nix nixpkgs-fmt
   description: Format nix package with nixpkgs-fmt
   entry: nixpkgs-fmt --check --explain
   language: system
   types: [nix]
   pass_filenames: true
 - id: nix-nixfmt
-  name: nixfmt
+  name: format nix nixfmt
   description: Format nix package with nixfmt
   entry: nixfmt --check
   language: system
   types: [nix]
   pass_filenames: true
 - id: nix-alejandra
-  name: alejandra
+  name: format nix alejandra
   description: Format nix package with alejandra
   entry: alejandra --check
   language: system
   types: [nix]
   pass_filenames: true
 - id: nix-statix
-  name: statix
+  name: check nix statix
   description: Link nix code with statix
   entry: statix check
   language: system
@@ -89,7 +89,7 @@
 # JavaScript/TypeScript
 #
 - id: js-prettier
-  name: js-prettier
+  name: format js prettier
   description: "Format JavaScript/TypeScript files with prettier"
   entry: prettier --write --list-different --ignore-unknown
   language: node
@@ -99,14 +99,14 @@
   additional_dependencies: ["prettier@latest"]
   minimum_pre_commit_version: "0"
 - id: js-yarn-run
-  name: js-yarn-run
+  name: yarn run
   description: "Run a custom Yarn command"
   entry: yarn
   language: system
   types_or: [javascript, jsx, ts, tsx, json]
   pass_filenames: true
 - id: js-yarn-run-filenames
-  name: js-yarn-run-filenames
+  name: yarn run with filenames
   description: "Run a custom Yarn command, passing the filenames"
   entry: yarn
   language: system
@@ -116,7 +116,7 @@
 # Lua
 #
 - id: lua-stylua
-  name: Stylua
+  name: format lua
   description: "Format Lua files with Stylua"
   entry: stylua
   types: [lua]
