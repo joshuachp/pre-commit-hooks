@@ -1,4 +1,6 @@
+##
 # Rust
+#
 - id: rust-fmt
   name: fmt
   description: Format files with cargo fmt.
@@ -28,7 +30,9 @@
   language: system
   types: [rust]
   pass_filenames: false
+##
 # PHP
+#
 - id: php-cs-fixer
   name: PHP CS-Fixer
   description: Fix PHP Code Standard
@@ -43,7 +47,9 @@
   language: system
   types: [php]
   pass_filenames: true
+##
 # Nix
+#
 - id: nix-flake-check
   name: nix-flake-check
   description: Check the flake.nix file for errors
@@ -79,7 +85,9 @@
   language: system
   types: [nix]
   pass_filenames: false
+##
 # JavaScript/TypeScript
+#
 - id: js-prettier
   name: js-prettier
   description: "Format JavaScript/TypeScript files with prettier"
@@ -103,4 +111,14 @@
   entry: yarn
   language: system
   types_or: [javascript, jsx, ts, tsx, json]
+  pass_filenames: true
+##
+# Lua
+#
+- id: lua-stylua
+  name: Stylua
+  description: "Format Lua files with Stylua"
+  entry: stylua
+  types: [lua]
+  language: system
   pass_filenames: true
