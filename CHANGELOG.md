@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.15
+
+### Fix
+
+- Don't use check in nix fmt
+
 ## 0.1.14
 
 ### Refactor
