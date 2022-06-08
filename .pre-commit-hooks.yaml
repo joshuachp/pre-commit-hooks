@@ -60,7 +60,7 @@
 - id: nix-nixpkgs-fmt
   name: format nix nixpkgs-fmt
   description: Format nix package with nixpkgs-fmt
-  entry: nixpkgs-fmt --check --explain
+  entry: nixpkgs-fmt
   language: system
   types: [nix]
   pass_filenames: true
@@ -74,7 +74,7 @@
 - id: nix-alejandra
   name: format nix alejandra
   description: Format nix package with alejandra
-  entry: alejandra --check
+  entry: alejandra
   language: system
   types: [nix]
   pass_filenames: true
