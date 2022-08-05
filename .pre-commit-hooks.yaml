@@ -55,7 +55,8 @@
   description: Check the flake.nix file for errors
   entry: nix flake check
   language: system
-  types: [nix]
+  files: "^(flake\\.lock|.*\\.nix)$"
+  types: [file]
   pass_filenames: false
 - id: nix-nixpkgs-fmt
   name: format nix nixpkgs-fmt
