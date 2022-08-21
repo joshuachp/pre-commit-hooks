@@ -32,6 +32,13 @@
   language: system
   types: [rust]
   pass_filenames: false
+- id: rust-build
+  name: build rust
+  description: Build the project
+  entry: cargo build
+  language: system
+  types: [rust]
+  pass_filenames: false
 ##
 # PHP
 #
