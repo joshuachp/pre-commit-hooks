@@ -12,6 +12,7 @@
   name: check rust
   description: Check the package for errors.
   entry: cargo check
+  args: ["--all-targets", "--all-features"]
   language: system
   types: [rust]
   pass_filenames: false
@@ -20,7 +21,7 @@
   description: Lint rust sources
   entry: cargo clippy
   language: system
-  args: ["--", "-D", "warnings"]
+  args: ["--all-targets", "--all-features", "--", "-D", "warnings"]
   types: [rust]
   pass_filenames: false
 - id: rust-test
