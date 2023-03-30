@@ -45,12 +45,14 @@
   entry: cargo hack
   args: ["--feature-powerset", "clippy"]
   types: [rust]
+  language: system
 - id: rust-doc
   name: rust docs
   description: Build the documentation
   entry: cargo docs
   args: ["--no-deps", "--all-features"]
   types: ["rust"]
+  language: system
 ##
 # PHP
 #
