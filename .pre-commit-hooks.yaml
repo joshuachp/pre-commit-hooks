@@ -46,7 +46,7 @@
   args: ["--feature-powerset", "clippy"]
   types: [rust]
 - id: rust-doc
-  name: build docs
+  name: rust docs
   description: Build the documentation
   entry: cargo docs
   args: ["--no-deps", "--all-features"]
@@ -107,6 +107,11 @@
   language: system
   types: [nix]
   pass_filenames: false
+- id: nix-build
+  name: nix build
+  description: Build the package with nix
+  entry: nix build
+  language: system
 ##
 # JavaScript/TypeScript
 #
