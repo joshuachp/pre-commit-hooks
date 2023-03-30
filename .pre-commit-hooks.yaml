@@ -39,6 +39,20 @@
   language: system
   types: [rust]
   pass_filenames: false
+- id: rust-hack
+  name: check all features
+  description: Use cargo-hack to check all features with clippy
+  entry: cargo hack
+  args: ["--feature-powerset", "clippy"]
+  types: [rust]
+  language: system
+- id: rust-doc
+  name: rust docs
+  description: Build the documentation
+  entry: cargo docs
+  args: ["--no-deps", "--all-features"]
+  types: ["rust"]
+  language: system
 ##
 # PHP
 #
@@ -95,6 +109,11 @@
   language: system
   types: [nix]
   pass_filenames: false
+- id: nix-build
+  name: nix build
+  description: Build the package with nix
+  entry: nix build
+  language: system
 ##
 # JavaScript/TypeScript
 #
