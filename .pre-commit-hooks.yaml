@@ -39,6 +39,18 @@
   language: system
   types: [rust]
   pass_filenames: false
+- id: rust-hack
+  name: check all features
+  description: Use cargo-hack to check all features with clippy
+  entry: cargo hack
+  args: ["--feature-powerset", "clippy"]
+  types: [rust]
+- id: rust-doc
+  name: build docs
+  description: Build the documentation
+  entry: cargo docs
+  args: ["--no-deps", "--all-features"]
+  types: ["rust"]
 ##
 # PHP
 #
