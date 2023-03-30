@@ -46,6 +46,7 @@
   args: ["--feature-powerset", "clippy"]
   types: [rust]
   language: system
+  pass_filenames: false
 - id: rust-doc
   name: rust docs
   description: Build the documentation
@@ -53,6 +54,7 @@
   args: ["--no-deps", "--all-features"]
   types: ["rust"]
   language: system
+  pass_filenames: false
 ##
 # PHP
 #
@@ -114,6 +116,7 @@
   description: Build the package with nix
   entry: nix build
   language: system
+  pass_filenames: false
 ##
 # JavaScript/TypeScript
 #
