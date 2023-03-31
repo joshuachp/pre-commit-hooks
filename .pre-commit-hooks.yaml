@@ -50,7 +50,7 @@
 - id: rust-doc
   name: rust docs
   description: Build the documentation
-  entry: cargo docs
+  entry: cargo doc
   args: ["--no-deps", "--all-features"]
   types: ["rust"]
   language: system
@@ -120,16 +120,6 @@
 ##
 # JavaScript/TypeScript
 #
-- id: js-prettier
-  name: format js prettier
-  description: "Format JavaScript/TypeScript files with prettier"
-  entry: prettier --write --list-different --ignore-unknown
-  language: node
-  types_or: [javascript, jsx, ts, tsx]
-  args: []
-  require_serial: false
-  additional_dependencies: ["prettier@latest"]
-  minimum_pre_commit_version: "0"
 - id: js-yarn-run
   name: yarn run
   description: "Run a custom Yarn command"
