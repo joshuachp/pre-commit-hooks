@@ -1,6 +1,7 @@
 ##
 # Rust
 #
+# Check
 - id: rust-fmt
   name: format rust
   description: Format files with cargo fmt.
@@ -24,11 +25,36 @@
   args: ["--all-targets", "--all-features", "--", "-D", "warnings"]
   types: [rust]
   pass_filenames: false
+- id: rust-doc
+  name: rust docs
+  description: Build the documentation
+  entry: env RUSTDOCFLAGS='--cfg docsrs' cargo doc
+  args: ["--no-deps", "--all-features"]
+  types: ["rust"]
+  language: system
+  pass_filenames: false
+- id: rust-hack
+  name: check all features
+  description: Use cargo-hack to check all features with clippy
+  entry: cargo hack
+  args: ["--feature-powerset", "check"]
+  types: [rust]
+  language: system
+  pass_filenames: false
+# Test
 - id: rust-test
   name: test rust
   description: Run the project test suite
   entry: cargo test
   args: ["--all-targets", "--all-features"]
+  language: system
+  types: [rust]
+  pass_filenames: false
+- id: rust-test-doc
+  name: test rust
+  description: Run the project test suite
+  entry: cargo test --doc
+  args: ["--all-features"]
   language: system
   types: [rust]
   pass_filenames: false
@@ -38,22 +64,6 @@
   entry: cargo build
   language: system
   types: [rust]
-  pass_filenames: false
-- id: rust-hack
-  name: check all features
-  description: Use cargo-hack to check all features with clippy
-  entry: cargo hack
-  args: ["--feature-powerset", "clippy"]
-  types: [rust]
-  language: system
-  pass_filenames: false
-- id: rust-doc
-  name: rust docs
-  description: Build the documentation
-  entry: cargo doc
-  args: ["--no-deps", "--all-features"]
-  types: ["rust"]
-  language: system
   pass_filenames: false
 ##
 # PHP
