@@ -28,8 +28,8 @@
 - id: rust-doc
   name: rust docs
   description: Build the documentation
-  entry: env RUSTDOCFLAGS='--cfg docsrs' cargo doc
-  args: ["--no-deps", "--all-features", "--", "-D", "warnings"]
+  entry: env RUSTDOCFLAGS='--cfg docsrs -D warnings' cargo doc
+  args: ["--no-deps", "--all-features", "--"]
   types: ["rust"]
   language: system
   pass_filenames: false
