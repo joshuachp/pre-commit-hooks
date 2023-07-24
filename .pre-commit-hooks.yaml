@@ -41,6 +41,14 @@
   types: [rust]
   language: system
   pass_filenames: false
+- id: rust-sqlx
+  name: check sqlx queries
+  description: Check that the sqlx queries are up to date
+  entry: cargo sqlx
+  args: ["prepare", "--check"]
+  types: [rust, sql]
+  language: system
+  pass_filenames: false
 # Test
 - id: rust-test
   name: test rust
