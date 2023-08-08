@@ -13,7 +13,7 @@
   name: check rust
   description: Check the package for errors.
   entry: cargo check
-  args: ["--all-targets", "--all-features", "--all", "--", "-D", "warnings"]
+  args: ["--all-targets", "--all-features", "--workspace", "--", "-D", "warnings"]
   language: system
   types: [rust]
   pass_filenames: false
@@ -22,14 +22,14 @@
   description: Lint rust sources
   entry: cargo clippy
   language: system
-  args: ["--all-targets", "--all-features", "--all", "--", "-D", "warnings"]
+  args: ["--all-targets", "--all-features", "--workspace", "--", "-D", "warnings"]
   types: [rust]
   pass_filenames: false
 - id: rust-doc
   name: rust docs
   description: Build the documentation
   entry: env RUSTDOCFLAGS='--cfg docsrs -D warnings' cargo doc
-  args: ["--no-deps", "--all-features", "--all"]
+  args: ["--no-deps", "--all-features", "--workspace"]
   types: ["rust"]
   language: system
   pass_filenames: false
@@ -37,7 +37,7 @@
   name: check all features
   description: Use cargo-hack to check all features with clippy
   entry: cargo hack
-  args: ["--feature-powerset", "--all", "check"]
+  args: ["--feature-powerset", "--workspace", "check"]
   types: [rust]
   language: system
   pass_filenames: false
@@ -54,7 +54,7 @@
   name: test rust
   description: Run the project test suite
   entry: cargo test
-  args: ["--all-targets", "--all-features", "--all"]
+  args: ["--all-targets", "--all-features", "--workspace"]
   language: system
   types: [rust]
   pass_filenames: false
@@ -62,7 +62,7 @@
   name: test rust doc
   description: Run the project test suite
   entry: cargo test --doc
-  args: ["--all-features", "--all"]
+  args: ["--all-features", "--workspace"]
   language: system
   types: [rust]
   pass_filenames: false
@@ -70,7 +70,7 @@
   name: build rust
   description: Build the project
   entry: cargo build
-  args: ["--all-features", "--all-targets", "--all"]
+  args: ["--all-features", "--all-targets", "--workspace"]
   language: system
   types: [rust]
   pass_filenames: false
