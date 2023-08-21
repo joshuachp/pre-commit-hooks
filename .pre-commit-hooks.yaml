@@ -1,6 +1,16 @@
 ##
 # Rust
 #
+# The file checked for most of the hooks are:
+#
+# - rust: for the rust source code
+# - toml: Cargo or other configuration files
+# - markdown: documentation that could be included with the #[doc] attribute
+#
+# This could cover more files than the ones actually used in the rust project (e.g. documentation
+# outside of rustdoc, etc, etc), but this also means a recompilation shouldn't be necessary and the
+# check should run fairly quickly.
+#
 # Check
 - id: rust-fmt
   name: format rust
@@ -15,7 +25,8 @@
   entry: cargo check
   args: ["--all-targets", "--all-features", "--workspace", "--", "-D", "warnings"]
   language: system
-  types: [rust]
+  types: [file]
+  files: '\.(rs|toml|md)$|Cargo.lock$'
   pass_filenames: false
 - id: rust-clippy
   name: check rust clippy
@@ -23,14 +34,16 @@
   entry: cargo clippy
   language: system
   args: ["--all-targets", "--all-features", "--workspace", "--", "-D", "warnings"]
-  types: [rust]
+  types: [file]
+  files: '\.(rs|toml|md)$|Cargo.lock$'
   pass_filenames: false
 - id: rust-doc
   name: rust docs
   description: Build the documentation
   entry: env RUSTDOCFLAGS='--cfg docsrs -D warnings' cargo doc
   args: ["--no-deps", "--all-features", "--workspace"]
-  types: ["rust"]
+  types: [file]
+  files: '\.(rs|toml|md)$|Cargo.lock$'
   language: system
   pass_filenames: false
 - id: rust-hack
@@ -38,7 +51,8 @@
   description: Use cargo-hack to check all features with clippy
   entry: cargo hack
   args: ["--feature-powerset", "--workspace", "check"]
-  types: [rust]
+  types: [file]
+  files: '\.(rs|toml|md)$|Cargo.lock$'
   language: system
   pass_filenames: false
 - id: rust-sqlx
@@ -46,7 +60,8 @@
   description: Check that the sqlx queries are up to date
   entry: cargo sqlx
   args: ["prepare", "--check"]
-  types: [rust, sql]
+  types: [file]
+  files: '\.(rs|toml|md|sql)$|Cargo.lock$'
   language: system
   pass_filenames: false
 # Test
@@ -55,24 +70,27 @@
   description: Run the project test suite
   entry: cargo test
   args: ["--all-targets", "--all-features", "--workspace"]
+  types: [file]
+  files: '\.(rs|toml|md|sql)$|Cargo.lock$'
   language: system
-  types: [rust]
   pass_filenames: false
 - id: rust-test-doc
   name: test rust doc
   description: Run the project test suite
   entry: cargo test --doc
   args: ["--all-features", "--workspace"]
+  types: [file]
+  files: '\.(rs|toml|md|sql)$|Cargo.lock$'
   language: system
-  types: [rust]
   pass_filenames: false
 - id: rust-build
   name: build rust
   description: Build the project
   entry: cargo build
   args: ["--all-features", "--all-targets", "--workspace"]
+  types: [file]
+  files: '\.(rs|toml|md|sql)$|Cargo.lock$'
   language: system
-  types: [rust]
   pass_filenames: false
 ##
 # PHP
