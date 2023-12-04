@@ -23,7 +23,8 @@
   name: check rust
   description: Check the package for errors.
   entry: cargo check
-  args: ["--all-targets", "--all-features", "--workspace", "--", "-D", "warnings"]
+  args:
+    ["--all-targets", "--all-features", "--workspace", "--", "-D", "warnings"]
   language: system
   types: [file]
   files: '\.(rs|toml|md)$|Cargo.lock$'
@@ -33,7 +34,8 @@
   description: Lint rust sources
   entry: cargo clippy
   language: system
-  args: ["--all-targets", "--all-features", "--workspace", "--", "-D", "warnings"]
+  args:
+    ["--all-targets", "--all-features", "--workspace", "--", "-D", "warnings"]
   types: [file]
   files: '\.(rs|toml|md)$|Cargo.lock$'
   pass_filenames: false
@@ -179,5 +181,39 @@
   description: "Format Lua files with Stylua"
   entry: stylua
   types: [lua]
+  language: system
+  pass_filenames: true
+##
+# Shell
+#
+- id: sh-check
+  name: check shell
+  description: "Check shell scripts with shellcheck"
+  entry: shellcheck
+  types: [bash]
+  language: system
+  pass_filenames: true
+- id: sh-fmt
+  name: format shell
+  description: "Format shell scripts with shfmt"
+  entry: shfmt
+  types_or: [bash, zsh]
+  language: system
+  pass_filenames: true
+- id: fish-fmt
+  name: format fish
+  description: "Format fish scripts with fish_indent"
+  entry: fish_indent
+  types: [fish]
+  language: system
+  pass_filenames: true
+##
+# Yaml
+#
+- id: yaml-fmt-prettier
+  name: format yaml
+  description: "Format yaml files with prettier"
+  entry: prettier
+  types: [yaml]
   language: system
   pass_filenames: true
