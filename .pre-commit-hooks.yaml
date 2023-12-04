@@ -183,3 +183,27 @@
   types: [lua]
   language: system
   pass_filenames: true
+##
+# Shell
+#
+- id: sh-check
+  name: check shell
+  description: "Check shell scripts with shellcheck"
+  entry: shellcheck
+  types: [bash]
+  language: system
+  pass_filenames: true
+- id: sh-fmt
+  name: format shell
+  description: "Format shell scripts with shfmt"
+  entry: shfmt
+  types_or: [bash, zsh]
+  language: system
+  pass_filenames: true
+- id: fish-fmt
+  name: format fish
+  description: "Format fish scripts with fish_indent"
+  entry: fish_indent
+  types: [fish]
+  language: system
+  pass_filenames: true
