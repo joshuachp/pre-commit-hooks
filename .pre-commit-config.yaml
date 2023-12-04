@@ -9,6 +9,10 @@ repos:
       - id: check-yaml
       - id: check-added-large-files
       - id: check-merge-conflict
+  - repo: https://github.com/joshuachp/pre-commit-hooks
+    rev: 0.1.31
+    hooks:
+      - id: yaml-fmt-prettier
   - repo: local
     hooks:
       - id: validate-hooks
