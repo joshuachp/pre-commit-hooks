@@ -23,7 +23,8 @@
   name: check rust
   description: Check the package for errors.
   entry: cargo check
-  args: ["--all-targets", "--all-features", "--workspace", "--", "-D", "warnings"]
+  args:
+    ["--all-targets", "--all-features", "--workspace", "--", "-D", "warnings"]
   language: system
   types: [file]
   files: '\.(rs|toml|md)$|Cargo.lock$'
@@ -33,7 +34,8 @@
   description: Lint rust sources
   entry: cargo clippy
   language: system
-  args: ["--all-targets", "--all-features", "--workspace", "--", "-D", "warnings"]
+  args:
+    ["--all-targets", "--all-features", "--workspace", "--", "-D", "warnings"]
   types: [file]
   files: '\.(rs|toml|md)$|Cargo.lock$'
   pass_filenames: false
