@@ -207,3 +207,13 @@
   types: [fish]
   language: system
   pass_filenames: true
+##
+# Yaml
+#
+- id: yaml-fmt-prettier
+  name: format yaml
+  description: "Format yaml files with prettier"
+  entry: prettier
+  types: [yaml]
+  language: system
+  pass_filenames: true
