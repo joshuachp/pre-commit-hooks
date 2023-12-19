@@ -1,4 +1,14 @@
 ##
+# Various
+#
+- id: typos
+  name: typos spell check
+  description: Source code spell checker
+  entry: typos
+  language: system
+  types: ["text"]
+  pass_filenames: true
+##
 # Rust
 #
 # The file checked for most of the hooks are:
