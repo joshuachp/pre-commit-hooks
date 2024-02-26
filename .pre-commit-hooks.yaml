@@ -201,6 +201,13 @@
   types: [lua]
   language: system
   pass_filenames: true
+- id: lua-check
+  name: lua check
+  description: "Static analysis for Lua code"
+  entry: luacheck
+  types: [lua]
+  language: system
+  pass_filenames: true
 ##
 # Shell
 #
