@@ -94,6 +94,15 @@
   files: '\.(rs|toml|md|sql)$|Cargo.lock$'
   language: system
   pass_filenames: false
+- id: rust-nextest
+  name: nextest rust
+  description: Run the project test suite with nextest
+  entry: cargo nextest run
+  args: ["--all-targets", "--all-features", "--workspace"]
+  types: [file]
+  files: '\.(rs|toml|md|sql)$|Cargo.lock$'
+  language: system
+  pass_filenames: false
 - id: rust-test-doc
   name: test rust doc
   description: Run the project test suite
