@@ -159,7 +159,9 @@
 - id: nix-nixfmt
   name: format nix nixfmt
   description: Format nix package with nixfmt
-  entry: nixfmt --check
+  entry: nixfmt
+  args:
+    - "--verify"
   language: system
   types: [nix]
   pass_filenames: true
