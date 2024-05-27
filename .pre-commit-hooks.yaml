@@ -5,10 +5,11 @@
   name: typos spell check
   description: Source code spell checker
   entry: typos
+  args: [--write-changes, --force-exclude]
   language: system
   types: ["text"]
   pass_filenames: true
-  stages: [pre-commit, commit-msg]
+  stages: [pre-commit, pre-merge-commit, pre-push, manual]
 - id: committed
   name: committed
   description: Nitpicking commit history since beabf39
