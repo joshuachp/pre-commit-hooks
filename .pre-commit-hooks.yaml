@@ -254,3 +254,31 @@
   types: [yaml]
   language: system
   pass_filenames: true
+##
+# Markdown
+#
+- id: md-fmt-dprint
+  name: format markdown
+  description: "Format markdown files with dprint"
+  entry: dprint
+  args: ["fmt"]
+  types: [markdown]
+  language: system
+  pass_filenames: true
+###
+# General formatters
+#
+- id: run-dprint
+  name: run dprint
+  description: "Format files with dprint"
+  entry: dprint
+  args: ["fmt"]
+  language: system
+  pass_filenames: true
+- id: run-prettier
+  name: run prettier
+  description: "Format files with prettier"
+  entry: prettier
+  args: ["-w"]
+  language: system
+  pass_filenames: true
