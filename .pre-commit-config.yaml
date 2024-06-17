@@ -11,7 +11,7 @@ repos:
       - id: check-added-large-files
       - id: check-merge-conflict
   - repo: https://github.com/joshuachp/pre-commit-hooks
-    rev: 0.1.35
+    rev: 0.1.38
     hooks:
       - id: yaml-fmt-prettier
       - id: typos
