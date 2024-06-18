@@ -227,14 +227,14 @@
   name: check shell
   description: "Check shell scripts with shellcheck"
   entry: shellcheck
-  types_or: [bash, sh]
+  types_or: [shell, bash, sh]
   language: system
   pass_filenames: true
 - id: sh-fmt
   name: format shell
   description: "Format shell scripts with shfmt"
   entry: shfmt
-  types_or: [bash, sh, zsh]
+  types_or: [shell, bash, sh, zsh]
   language: system
   pass_filenames: true
 - id: fish-fmt
