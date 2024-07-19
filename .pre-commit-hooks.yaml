@@ -122,6 +122,22 @@
   files: '\.(rs|toml|md|sql)$|Cargo.lock$'
   language: system
   pass_filenames: false
+- id: rust-min-ver
+  name: rust direct minimal versions
+  description: Check the compatibility of the direct dependencies minimal versions
+  entry: cargo minimal-versions
+  args:
+    [
+      "check",
+      "--workspace",
+      "--ignore-private",
+      "--detach-path-deps=skip-exact",
+      "--direct",
+    ]
+  types: [file]
+  files: '\.(rs|toml|md|sql)$|Cargo.lock$'
+  language: system
+  pass_filenames: false
 ##
 # PHP
 #
