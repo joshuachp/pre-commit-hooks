@@ -61,7 +61,7 @@
 - id: rust-doc
   name: rust docs
   description: Build the documentation
-  entry: env RUSTDOCFLAGS='--cfg docsrs -D warnings' cargo doc
+  entry: env RUSTDOCFLAGS='--cfg docsrs -D warnings' cargo +nightly doc
   args: ["--no-deps", "--all-features", "--workspace"]
   types: [file]
   files: '\.(rs|toml|md)$|Cargo.lock$'
