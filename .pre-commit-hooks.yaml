@@ -68,6 +68,15 @@
   language: system
   pass_filenames: false
 - id: rust-hack
+  name: check each features
+  description: Use cargo-hack to check each feature
+  entry: cargo hack
+  args: ["--each-feature", "--no-dev-deps", "--workspace", "check"]
+  types: [file]
+  files: '\.(rs|toml|md)$|Cargo.lock$'
+  language: system
+  pass_filenames: false
+- id: rust-hack-powerset
   name: check all features
   description: Use cargo-hack to check all features with clippy
   entry: cargo hack
