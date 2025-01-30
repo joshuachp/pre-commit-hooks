@@ -3,7 +3,7 @@
 default_install_hook_types: [pre-commit, pre-push, commit-msg]
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.6.0
+    rev: v5.0.0
     hooks:
       - id: trailing-whitespace
       - id: end-of-file-fixer
@@ -11,11 +11,10 @@ repos:
       - id: check-added-large-files
       - id: check-merge-conflict
   - repo: https://github.com/joshuachp/pre-commit-hooks
-    rev: 0.1.38
+    rev: 0.1.42
     hooks:
       - id: yaml-fmt-prettier
       - id: typos
-      # - id: committed
   - repo: local
     hooks:
       - id: validate-hooks
