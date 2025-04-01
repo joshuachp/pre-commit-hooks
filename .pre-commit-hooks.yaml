@@ -5,7 +5,7 @@
   name: typos spell check
   description: Source code spell checker
   entry: typos
-  args: [--write-changes, --force-exclude]
+  args: [--hidden, --write-changes, --force-exclude]
   language: system
   types: ["text"]
   pass_filenames: true
@@ -70,7 +70,7 @@
 - id: rust-cargo-docs-rs
   name: rust cargo docs-rs
   description: Build the documentation like docs.rs
-  entry: env RUSTDOCFLAGS='-D warnings' cargo +nighlty docs-rs
+  entry: env RUSTDOCFLAGS='-D warnings' cargo +nightly docs-rs
   types: [file]
   files: '\.(rs|toml|md)$|Cargo.lock$'
   language: system
