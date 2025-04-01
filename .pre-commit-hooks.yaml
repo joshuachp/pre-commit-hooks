@@ -67,6 +67,14 @@
   files: '\.(rs|toml|md)$|Cargo.lock$'
   language: system
   pass_filenames: false
+- id: rust-cargo-docs-rs
+  name: rust cargo docs-rs
+  description: Build the documentation like docs.rs
+  entry: env RUSTDOCFLAGS='-D warnings' cargo docs-rs
+  types: [file]
+  files: '\.(rs|toml|md)$|Cargo.lock$'
+  language: system
+  pass_filenames: false
 - id: rust-hack
   name: check each features
   description: Use cargo-hack to check each feature
