@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.2](https://github.com/joshuachp/pre-commit-hooks/compare/v0.3.1...v0.3.2) (2025-04-01)
+
+
+### Bug Fixes
+
+* **typos:** add hidden flag ([058e463](https://github.com/joshuachp/pre-commit-hooks/commit/058e463cec649046e9ab8ec4aa579f34586cd707))
+* **typos:** add hidden flag ([024bc06](https://github.com/joshuachp/pre-commit-hooks/commit/024bc069e9a1ed535f258e728724dd89d3168c6b))
+
 ## [0.3.1](https://github.com/joshuachp/pre-commit-hooks/compare/v0.3.0...v0.3.1) (2025-04-01)
 
 
