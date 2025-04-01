@@ -70,7 +70,7 @@
 - id: rust-cargo-docs-rs
   name: rust cargo docs-rs
   description: Build the documentation like docs.rs
-  entry: env RUSTDOCFLAGS='-D warnings' cargo docs-rs
+  entry: env RUSTDOCFLAGS='-D warnings' cargo +nighlty docs-rs
   types: [file]
   files: '\.(rs|toml|md)$|Cargo.lock$'
   language: system
