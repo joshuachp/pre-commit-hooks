@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.1](https://github.com/joshuachp/pre-commit-hooks/compare/v0.3.0...v0.3.1) (2025-04-01)
+
+
+### Bug Fixes
+
+* **cargo-docs-rs:** use the nightly toolchain ([2158cb9](https://github.com/joshuachp/pre-commit-hooks/commit/2158cb96f1d07070433882c212cf2a2b0fa5f4b9))
+* **cargo-docs-rs:** use the nightly toolchain ([88ce112](https://github.com/joshuachp/pre-commit-hooks/commit/88ce112a673d7396f3892e4016ec98117b5ebc51))
+
 ## [0.3.0](https://github.com/joshuachp/pre-commit-hooks/compare/v0.2.0...v0.3.0) (2025-04-01)
 
 
