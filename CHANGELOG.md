@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.4.0](https://github.com/joshuachp/pre-commit-hooks/compare/v0.3.2...v0.4.0) (2025-07-25)
+
+
+### Features
+
+* **pre-commit:** don't use args for rust commands ([39c8c57](https://github.com/joshuachp/pre-commit-hooks/commit/39c8c572f4dc1e501c581c1f5d60b99f9ad3a372))
+* **pre-commit:** don't use args for rust commands ([e814fee](https://github.com/joshuachp/pre-commit-hooks/commit/e814fee4cb9dda54fe2b4ca8f4ade8ef59add15f))
+
 ## [0.3.2](https://github.com/joshuachp/pre-commit-hooks/compare/v0.3.1...v0.3.2) (2025-04-01)
 
 
