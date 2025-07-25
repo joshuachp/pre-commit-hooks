@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.4.1](https://github.com/joshuachp/pre-commit-hooks/compare/v0.4.0...v0.4.1) (2025-07-25)
+
+
+### Bug Fixes
+
+* **shfmt:** error with diff ([78b0cc2](https://github.com/joshuachp/pre-commit-hooks/commit/78b0cc29e2779d64a0899a5caa5d9bc9c5bf70af))
+* **shfmt:** error with diff ([955c110](https://github.com/joshuachp/pre-commit-hooks/commit/955c1101d869eba1f2ca44d3f15163fc03a56781))
+
 ## [0.4.0](https://github.com/joshuachp/pre-commit-hooks/compare/v0.3.2...v0.4.0) (2025-07-25)
 
 
