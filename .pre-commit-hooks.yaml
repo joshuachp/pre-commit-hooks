@@ -37,13 +37,10 @@
   entry: cargo fmt
   language: system
   types: [rust]
-  args: ["--"]
 - id: rust-check
   name: check rust
   description: Check the package for errors.
-  entry: cargo check
-  args:
-    ["--all-targets", "--all-features", "--workspace", "--", "-D", "warnings"]
+  entry: env RUSTFLAGS='-Dwarnings' cargo check --all-targets --all-features --workspace
   language: system
   types: [file]
   files: '\.(rs|toml|md)$|Cargo.lock$'
@@ -51,18 +48,15 @@
 - id: rust-clippy
   name: check rust clippy
   description: Lint rust sources
-  entry: cargo clippy
+  entry: env RUSTFLAGS='-Dwarnings' cargo clippy --all-targets --all-features --workspace
   language: system
-  args:
-    ["--all-targets", "--all-features", "--workspace", "--", "-D", "warnings"]
   types: [file]
   files: '\.(rs|toml|md)$|Cargo.lock$'
   pass_filenames: false
 - id: rust-doc
   name: rust docs
   description: Build the documentation
-  entry: env RUSTDOCFLAGS='--cfg docsrs -D warnings' cargo +nightly doc
-  args: ["--no-deps", "--all-features", "--workspace"]
+  entry: env RUSTDOCFLAGS='--cfg docsrs -D warnings' cargo +nightly doc --no-deps --all-features --workspace
   types: [file]
   files: '\.(rs|toml|md)$|Cargo.lock$'
   language: system
@@ -78,17 +72,15 @@
 - id: rust-hack
   name: check each features
   description: Use cargo-hack to check each feature
-  entry: cargo hack
-  args: ["--each-feature", "--no-dev-deps", "--workspace", "check"]
+  entry: env RUSTFLAGS='-Dwarnings' cargo hack --each-feature --no-dev-deps --workspace check
   types: [file]
   files: '\.(rs|toml|md)$|Cargo.lock$'
   language: system
   pass_filenames: false
 - id: rust-hack-powerset
   name: check all features
-  description: Use cargo-hack to check all features with clippy
-  entry: cargo hack
-  args: ["--feature-powerset", "--workspace", "check"]
+  description: Use cargo-hack to check all features
+  entry: env RUSTFLAGS='-Dwarnings' cargo hack --feature-powerset --workspace check
   types: [file]
   files: '\.(rs|toml|md)$|Cargo.lock$'
   language: system
@@ -96,8 +88,7 @@
 - id: rust-sqlx
   name: check sqlx queries
   description: Check that the sqlx queries are up to date
-  entry: cargo sqlx
-  args: ["prepare", "--check"]
+  entry: cargo sqlx prepare --check
   types: [file]
   files: '\.(rs|toml|md|sql)$|Cargo.lock$'
   language: system
@@ -106,8 +97,7 @@
 - id: rust-test
   name: test rust
   description: Run the project test suite
-  entry: cargo test
-  args: ["--all-targets", "--all-features", "--workspace"]
+  entry: cargo test --all-targets --all-features --workspace
   types: [file]
   files: '\.(rs|toml|md|sql)$|Cargo.lock$'
   language: system
@@ -115,8 +105,7 @@
 - id: rust-nextest
   name: nextest rust
   description: Run the project test suite with nextest
-  entry: cargo nextest run
-  args: ["--all-targets", "--all-features", "--workspace"]
+  entry: cargo nextest run --all-targets --all-features --workspace
   types: [file]
   files: '\.(rs|toml|md|sql)$|Cargo.lock$'
   language: system
@@ -124,8 +113,7 @@
 - id: rust-test-doc
   name: test rust doc
   description: Run the project test suite
-  entry: cargo test --doc
-  args: ["--all-features", "--workspace"]
+  entry: cargo test --doc --all-features --workspace
   types: [file]
   files: '\.(rs|toml|md|sql)$|Cargo.lock$'
   language: system
@@ -133,8 +121,7 @@
 - id: rust-build
   name: build rust
   description: Build the project
-  entry: cargo build
-  args: ["--all-features", "--all-targets", "--workspace"]
+  entry: cargo build --all-features --all-targets --workspace
   types: [file]
   files: '\.(rs|toml|md|sql)$|Cargo.lock$'
   language: system
@@ -142,15 +129,7 @@
 - id: rust-min-ver
   name: rust direct minimal versions
   description: Check the compatibility of the direct dependencies minimal versions
-  entry: cargo minimal-versions
-  args:
-    [
-      "check",
-      "--workspace",
-      "--ignore-private",
-      "--detach-path-deps=skip-exact",
-      "--direct",
-    ]
+  entry: cargo minimal-versions check --workspace --ignore-private --detach-path-deps=skip-exact --direct
   types: [file]
   files: '\.(rs|toml|md|sql)$|Cargo.lock$'
   language: system
