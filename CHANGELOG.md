@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.4.2](https://github.com/joshuachp/pre-commit-hooks/compare/v0.4.1...v0.4.2) (2025-08-27)
+
+
+### Bug Fixes
+
+* **rust:** do not pass files to rust fmt ([06b6c52](https://github.com/joshuachp/pre-commit-hooks/commit/06b6c5240b680d7c2a044191843abf3905ded6e6))
+* **rust:** do not pass files to rust fmt ([be6bc9e](https://github.com/joshuachp/pre-commit-hooks/commit/be6bc9e058628b2409ca6ec462f58f4c76543235))
+
 ## [0.4.1](https://github.com/joshuachp/pre-commit-hooks/compare/v0.4.0...v0.4.1) (2025-07-25)
 
 
