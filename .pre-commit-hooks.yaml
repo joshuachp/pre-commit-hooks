@@ -246,7 +246,8 @@
 - id: sh-fmt
   name: format shell
   description: "Format shell scripts with shfmt"
-  entry: shfmt --diff
+  entry: shfmt
+  args: [--write]
   types_or: [shell, bash, sh, zsh]
   language: system
   pass_filenames: true
