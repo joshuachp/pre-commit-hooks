@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.4.4](https://github.com/joshuachp/pre-commit-hooks/compare/v0.4.3...v0.4.4) (2025-11-14)
+
+
+### Bug Fixes
+
+* **shfmt:** use spaces for indentation ([783cffc](https://github.com/joshuachp/pre-commit-hooks/commit/783cffcf075759a10faf3dae06b1b642c13d409e))
+* **shfmt:** use spaces for indentation ([9e1d9a2](https://github.com/joshuachp/pre-commit-hooks/commit/9e1d9a22ffbae466b6b153dfbeea90bbf1cd8f29))
+
 ## [0.4.3](https://github.com/joshuachp/pre-commit-hooks/compare/v0.4.2...v0.4.3) (2025-11-14)
 
 
