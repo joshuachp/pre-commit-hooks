@@ -247,7 +247,7 @@
   name: format shell
   description: "Format shell scripts with shfmt"
   entry: shfmt
-  args: [--write]
+  args: [--write, "--indent=4"]
   types_or: [shell, bash, sh, zsh]
   language: system
   pass_filenames: true
