@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.4.3](https://github.com/joshuachp/pre-commit-hooks/compare/v0.4.2...v0.4.3) (2025-11-14)
+
+
+### Bug Fixes
+
+* **pre-commit:** write shell format ([4b5aa74](https://github.com/joshuachp/pre-commit-hooks/commit/4b5aa74ccddabd614310a8f05db67792589129ed))
+* **pre-commit:** write shell format ([14452ef](https://github.com/joshuachp/pre-commit-hooks/commit/14452ef3c3837bb30db82b87bbba97d4774d6a7c))
+
 ## [0.4.2](https://github.com/joshuachp/pre-commit-hooks/compare/v0.4.1...v0.4.2) (2025-08-27)
 
 
